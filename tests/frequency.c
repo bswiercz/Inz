@@ -11,8 +11,8 @@
 void
 Frequency(int n)
 {
-	int		i;
-	double	f, s_obs, p_value, sum, sqrt2 = 1.41421356237309504880;
+	int32_t i;
+	float f, s_obs, p_value, sum, sqrt2 = 1.41421356237309504880;
 	
 	sum = 0.0;
 	for ( i=0; i<n; i++ )

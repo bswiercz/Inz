@@ -7,16 +7,12 @@
 #include "cephes.h"
 #include "tm_stm32f4_sdram.h"
 
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-                A P P R O X I M A T E  E N T R O P Y   T E S T
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
 void
 ApproximateEntropy(int m, int n)
 {
-	int				i, j, k, r, blockSize, seqLength, powLen, index;
-	double			sum, numOfBlocks, ApEn[2], apen, chi_squared, p_value;
-	unsigned int	*P;
+	int32_t i, j, k, r, blockSize, seqLength, powLen, index;
+	float sum, numOfBlocks, ApEn[2], apen, chi_squared, p_value;
+	uint32_t *P;
 	
 	//m-block length
 

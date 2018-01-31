@@ -13,7 +13,7 @@ readHexDigitsInBinaryFormat(FILE *fp)
 	BYTE	buffer[4];
 	
 	if ( (epsilon = (BitSequence *) calloc(tp.n,sizeof(BitSequence))) == NULL ) {
-		printf("BITSTREAM DEFINITION:  Insufficient memory available.\n");
+			//ins mem
 		return;
 	}
 
@@ -31,7 +31,6 @@ readHexDigitsInBinaryFormat(FILE *fp)
 			}
 			done = convertToBits(buffer, 32, tp.n, &num_0s, &num_1s, &bitsRead);
 		} while ( !done );
-		fprintf(freqfp, "\t\tBITSREAD = %d 0s = %d 1s = %d\n", bitsRead, num_0s, num_1s);
 		
 		nist_test_suite();
 		

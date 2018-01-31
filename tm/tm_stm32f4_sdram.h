@@ -246,74 +246,12 @@ uint8_t TM_SDRAM_Init(void);
  */
 #define TM_SDRAM_Read8(address)				(*(__IO uint8_t *) (SDRAM_START_ADR + (address)))
 
-/**
- * @brief  Writes 8-bit value to SDRAM
- * @param  address: Offset address from starting address of SDRAM
- * @param  value: 8-bit value to be saved in SDRAM
- * @retval None
- * @note   Defined as macro for faster execution
- */
-#define TM_SDRAM_Write2ndVector(address, value)		(*(__IO uint8_t *) (SDRAM_START_ADR + (address) + 0x180000) = (value))
-
-/**
- * @brief  Reads 8-bit value from SDRAM
- * @param  address: offset address from starting address of SDRAM
- * @retval 8-bit value stored at desired location
- * @note   Defined as macro for faster execution
- */
-#define TM_SDRAM_Read2ndVector(address)				(*(__IO uint8_t *) (SDRAM_START_ADR + (address) + 0x180000))
-
-/**
- * @brief  Writes 8-bit value to SDRAM
- * @param  address: Offset address from starting address of SDRAM
- * @param  value: 8-bit value to be saved in SDRAM
- * @retval None
- * @note   Defined as macro for faster execution
- */
-#define TM_SDRAM_Write3rdVector(address, value)		(*(__IO uint8_t *) (SDRAM_START_ADR + (address) + 0x300000) = (value))
-
-/**
- * @brief  Reads 8-bit value from SDRAM
- * @param  address: offset address from starting address of SDRAM
- * @retval 8-bit value stored at desired location
- * @note   Defined as macro for faster execution
- */
-#define TM_SDRAM_Read3rdVector(address)				(*(__IO uint8_t *) (SDRAM_START_ADR + (address) + 0x300000))
-
-/**
- * @brief  Writes 8-bit value to SDRAM
- * @param  address: Offset address from starting address of SDRAM
- * @param  value: 8-bit value to be saved in SDRAM
- * @retval None
- * @note   Defined as macro for faster execution
- */
-#define TM_SDRAM_Write4thVector(address, value)		(*(__IO uint8_t *) (SDRAM_START_ADR + (address) + 0x480000) = (value))
-
-/**
- * @brief  Reads 8-bit value from SDRAM
- * @param  address: offset address from starting address of SDRAM
- * @retval 8-bit value stored at desired location
- * @note   Defined as macro for faster execution
- */
-#define TM_SDRAM_Read4thVector(address)				(*(__IO uint8_t *) (SDRAM_START_ADR + (address) + 0x480000))
-
-/**
- * @brief  Writes 8-bit value to SDRAM
- * @param  address: Offset address from starting address of SDRAM
- * @param  value: 8-bit value to be saved in SDRAM
- * @retval None
- * @note   Defined as macro for faster execution
- */
-#define TM_SDRAM_Write5thVector(address, value)		(*(__IO uint8_t *) (SDRAM_START_ADR + (address) + 0x600000) = (value))
-
-/**
- * @brief  Reads 8-bit value from SDRAM
- * @param  address: offset address from starting address of SDRAM
- * @retval 8-bit value stored at desired location
- * @note   Defined as macro for faster execution
- */
-#define TM_SDRAM_Read5thVector(address)				(*(__IO uint8_t *) (SDRAM_START_ADR + (address) + 0x600000))
-
+#define TM_SDRAM_Write2ndVector(address, value)		(*(__IO uint8_t *) (SDRAM_START_ADR + (address) + 0x200000) = (value))
+#define TM_SDRAM_Read2ndVector(address)				(*(__IO uint8_t *) (SDRAM_START_ADR + (address) + 0x200000))
+#define TM_SDRAM_Write3rdVector(address, value)		(*(__IO uint8_t *) (SDRAM_START_ADR + (address) + 0x400000) = (value))
+#define TM_SDRAM_Read3rdVector(address)				(*(__IO uint8_t *) (SDRAM_START_ADR + (address) + 0x400000))
+#define TM_SDRAM_Write4thVector(address, value)		(*(__IO uint8_t *) (SDRAM_START_ADR + (address) + 0x600000) = (value))
+#define TM_SDRAM_Read4thVector(address)				(*(__IO uint8_t *) (SDRAM_START_ADR + (address) + 0x600000))
 
 /**
  * @brief  Writes 16-bit value to SDRAM

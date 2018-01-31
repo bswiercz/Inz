@@ -8,8 +8,8 @@
 
 void CumulativeSums(int n)
 {
-	int		S, sup, inf, z, zrev, k;
-	double	sum1, sum2, p_value;
+	int32_t S, sup, inf, z, zrev, k;
+	float sum1, sum2, p_value;
 
 	S = 0;
 	sup = 0;

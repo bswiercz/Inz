@@ -8,9 +8,9 @@
 
 void RandomExcursionsVariant(int n)
 {
-	int		i, p, J, x, constraint, count, *S_k;
-	int		stateX[18] = { -9, -8, -7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-	double	p_value;
+	int32_t i, p, J, x, constraint, count, *S_k;
+	int32_t stateX[18] = { -9, -8, -7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+	float p_value;
 	
 	J = 0;
 	TM_SDRAM_Write2ndVector(0, 2*(int)TM_SDRAM_Read8(0) - 1);

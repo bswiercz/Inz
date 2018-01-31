@@ -34,9 +34,9 @@ LinearComplexity(int M, int n)
 		/* DETERMINE LINEAR COMPLEXITY */
 		N_ = 0;
 		while ( N_ < M ) {
-			d = (int)epsilon[ii*M+N_];
+			d = (int)TM_SDRAM_Read8(ii*M+N_);
 			for ( i=1; i<=L; i++ )
-				d += C[i] * epsilon[ii*M+N_-i];
+				d += C[i] * TM_SDRAM_Read8(ii*M+N_-i);
 			d = d%2;
 			if ( d == 1 ) {
 				for ( i=0; i<M; i++ ) {
@@ -84,10 +84,10 @@ LinearComplexity(int M, int n)
 			nu[6]++;
 	}
 	chi2 = 0.00;
-	/*for ( i=0; i<K+1; i++ )
-		fprintf(stats[TEST_LINEARCOMPLEXITY], "%4d ", (int)nu[i]);*/
+
 	for ( i=0; i<K+1; i++ )
 		chi2 += pow(nu[i]-N*pi[i], 2) / (N*pi[i]);
+
 	p_value = cephes_igamc(K/2.0, chi2/2.0);
 
 	//decyzja

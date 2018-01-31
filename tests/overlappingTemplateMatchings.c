@@ -15,12 +15,12 @@ double	Pr(int u, double eta);
 void
 OverlappingTemplateMatchings(int m, int n)
 {
-	int				i, k, match;
-	double			W_obs, eta, sum, chi2, p_value, lambda;
-	int				M, N, j, K = 5;
-	unsigned int	nu[6] = { 0, 0, 0, 0, 0, 0 };
-	//double			pi[6] = { 0.143783, 0.139430, 0.137319, 0.124314, 0.106209, 0.348945 };
-	double			pi[6] = { 0.364091, 0.185659, 0.139381, 0.100571, 0.0704323, 0.139865 };
+	int32_t i, k, match;
+	float W_obs, eta, sum, chi2, p_value, lambda;
+	int32_t M, N, j, K = 5;
+	uint32_t nu[6] = { 0, 0, 0, 0, 0, 0 };
+	//float			pi[6] = { 0.143783, 0.139430, 0.137319, 0.124314, 0.106209, 0.348945 };
+	float			pi[6] = { 0.364091, 0.185659, 0.139381, 0.100571, 0.0704323, 0.139865 };
 	BitSequence		*sequence;
 
 	M = 1032;
